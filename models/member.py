@@ -25,7 +25,8 @@ class Member(Person):
         book_to_return.available = True
 
     def list_borrowed_books(self):
-        print(f"Borrowed books are: {self.borrowed_books}")
+        borrowed_books = list([book.title for book in self.borrowed_books])
+        print(f"Borrowed books are: {borrowed_books}")
 
     def __str__(self):
         return f"{self.name}, member_id: {self.member_id}"
